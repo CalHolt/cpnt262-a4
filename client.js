@@ -13,3 +13,16 @@ for (let i = 1; i <= 5; i++){
   rTri += "<p>"
 }
 document.querySelector("#trian").innerHTML = `<p>${rTri}</p>`;
+
+// defining number of columns and rows for shape
+let n = 5;
+// Define string for shape
+let down = "";
+for (let i = 0; i < n; i++) {
+  // adding stars
+  for (let c = 0; c < n - i; c++) {
+    down += "*";
+  }
+  down += "<p>";
+}
+document.querySelector("#square").innerHTML = `<p>${down}</p>`;
