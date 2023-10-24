@@ -14,15 +14,30 @@ for (let i = 1; i <= 5; i++){
 }
 document.querySelector("#trian").innerHTML = `<p>${rTri}</p>`;
 
-// defining number of columns and rows for shape
-let n = 5;
-// Define string for shape
+
 let down = "";
-for (let i = 0; i < n; i++) {
-  // adding stars
-  for (let c = 0; c < n - i; c++) {
-    down += "*";
-  }
-  down += "<p>";
+
+for(let i = 1; i < 6; i++ ){
+    for(let m = 1; m < 6; m++){
+        if(i <= m ){
+            down += "*";
+        }else{
+            down += " ";
+        }
+    }
+    down +=("<p>")
 }
-document.querySelector("#square").innerHTML = `<p>${down}</p>`;
+
+document.querySelector("#down-tri").innerHTML = `<p>${down}</p>`;
+
+// -----------------------Second Challenge---------------------
+// original string
+const originalSentence = "hi there my name is cal";
+// create new variable to split word up
+const splitSentence = originalSentence.split(" ");
+// capitalize each words first letter using map
+const newString = splitSentence.map((word) => {
+  return word[0].toUpperCase() + word.substring(1);
+}).join(" ");
+// attach to html 
+document.querySelector("#challenge2").innerText = newString
