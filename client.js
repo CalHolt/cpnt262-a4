@@ -14,9 +14,10 @@ for (let i = 1; i <= 5; i++){
 }
 document.querySelector("#trian").innerHTML = `<p>${rTri}</p>`;
 
-
+// create empty string
 let down = "";
 
+// set rows / columns
 for(let i = 1; i < 6; i++ ){
     for(let m = 1; m < 6; m++){
         if(i <= m ){
