@@ -20,15 +20,18 @@ let down = "";
 // set rows / columns
 for(let i = 1; i < 6; i++ ){
     for(let m = 1; m < 6; m++){
+      // places stars to create shape
         if(i <= m ){
             down += "*";
+            // makes the spaces so that triangle can be formed and be upside down
         }else{
             down += " ";
         }
     }
+    // creates p tags for new lines
     down +=("<p>")
 }
-
+// rendering loop to html
 document.querySelector("#down-tri").innerHTML = `<p>${down}</p>`;
 
 // -----------------------Second Challenge---------------------
